@@ -1,0 +1,9 @@
+[submodule "k-tmux"]
+	path = k-tmux
+	url = https://github.com/jcppython/k-tmux.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/jcppython/oh-my-zsh.git
+[submodule "k-vim"]
+	path = k-vim
+	url = https://github.com/jcppython/k-vim
