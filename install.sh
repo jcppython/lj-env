@@ -15,10 +15,10 @@ cp $HOME/.zshrc $HOME/.zshrc.bak
 cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
 chsh -s /bin/zsh
 
-echo "Step2: Install k-tmux"
-cd $BASEDIR/k-tmux
-git checkout dev
-sh -x install.sh
+#echo "Step2: Install k-tmux"
+#cd $BASEDIR/k-tmux
+#git checkout dev
+#sh -x install.sh
 
 echo "Step3: Install k-vim"
 cd $BASEDIR/k-vim
