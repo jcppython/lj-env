@@ -333,7 +333,8 @@ class SSHGO:
         else:
             self.restore_screen()
 
-            exe_args = [script, node['line']]
+            # os.getcwd()
+            exe_args = [script, os.getcwd(), node['line']]
             os.execvp(script, exe_args)
 
     def render_screen(self):
@@ -444,7 +445,6 @@ if __name__ == '__main__':
     options, args = parser.parse_args(sys.argv)
     host_file = os.path.expanduser(sshHosts)
     #  print 'Use host file : ' + host_file
-
 
     if options.config is not None:
         host_file = options.config
