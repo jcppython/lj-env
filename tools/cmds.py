@@ -440,12 +440,20 @@ class SSHGO:
 if __name__ == '__main__':
     parser = OptionParser()
     parser.add_option('-c', '--config', help='use specified config file instead of hosts')
+    parser.add_option('-a', '--add', dest="strcmd", help='append new cmd into config file')
     options, args = parser.parse_args(sys.argv)
     host_file = os.path.expanduser(sshHosts)
     #  print 'Use host file : ' + host_file
 
+
     if options.config is not None:
         host_file = options.config
+
+    if options.strcmd is not None:
+        with open(host_file, "a+") as file:
+            file.write(options.strcmd+'\n')
+        exit()
+
     if not os.path.exists(host_file):
         print >>sys.stderr,'hosts is not found, create it'
         fp = open(host_file, 'w')
