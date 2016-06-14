@@ -1,0 +1,4 @@
+cmds
+    ls
+school
+    ls -l ../
