@@ -6,4 +6,7 @@ current_pwd=$1
 cmd=$2
 
 cd $current_pwd
-eval $cmd
+# 执行命令
+# eval $cmd
+# 显示命令
+echo "$cmd"
